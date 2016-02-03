@@ -16,9 +16,13 @@ class reactnative1 extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
+<<<<<<< HEAD
           Welcome to In Memory Of!
         
         by Ani and Alex
+=======
+          Welcome to React Native!
+>>>>>>> parent of fbc58e7... Test commit
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.ios.js
