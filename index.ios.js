@@ -17,8 +17,6 @@ class reactnative1 extends Component {
       <View style={styles.container}>
         <Text style={styles.welcome}>
           Welcome to In Memory Of!
-        
-        by Ani and Alex
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.ios.js
