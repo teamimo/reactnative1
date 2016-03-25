@@ -26,6 +26,7 @@
 		C82C6A681C9134C600719D70 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C82C6A671C9134C600719D70 /* FBSDKCoreKit.framework */; };
 		C82C6A6A1C9134D600719D70 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C82C6A691C9134D600719D70 /* FBSDKLoginKit.framework */; };
 		C82C6A6C1C9134F000719D70 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C82C6A6B1C9134F000719D70 /* FBSDKShareKit.framework */; };
+		C89570B91CA2418000DE2343 /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C89570B81CA2418000DE2343 /* Lobster-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +142,7 @@
 		C82C6A671C9134C600719D70 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		C82C6A691C9134D600719D70 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		C82C6A6B1C9134F000719D70 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		C89570B81CA2418000DE2343 /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lobster-Regular.ttf"; path = "../../../../Downloads/Lobster/Lobster-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +310,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				C89570B81CA2418000DE2343 /* Lobster-Regular.ttf */,
 				C82C6A671C9134C600719D70 /* FBSDKCoreKit.framework */,
 				C82C6A691C9134D600719D70 /* FBSDKLoginKit.framework */,
 				C82C6A6B1C9134F000719D70 /* FBSDKShareKit.framework */,
@@ -552,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				C89570B91CA2418000DE2343 /* Lobster-Regular.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

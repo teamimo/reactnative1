@@ -1,6 +1,4 @@
 var Swiper = require('react-native-swiper')
-// es6
-// import Swiper from 'react-native-swiper'
 
 var React = require('react-native');
 var {
@@ -8,69 +6,120 @@ var {
   StyleSheet,
   Text,
   View,
+  Component
 } = React;
 
+
 var styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#046380',
+    alignItems: 'center',
+    paddingTop: 20
+  },
+  header: {
+    color: '#fff',
+    fontSize: 80,
+    fontWeight: 'bold',
+    fontFamily: 'Lobster',
+    marginTop: 20 
+  },
   wrapper: {
+
   },
   slide1: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#9DD6EB',
+    // backgroundColor: '#EFECCA',
   },
   slide2: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#97CAE5',
+    // backgroundColor: '#EFECCA',
   },
   slide3: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#92BBD9',
+    // backgroundColor: '#EFECCA',
   },
   text: {
     color: '#fff',
-    fontSize: 30,
-    fontWeight: 'bold',
+    fontSize: 25,
+    fontFamily: 'Helvetica Light',
+    alignItems: 'center'
+  },
+  facebookLoginButton: {
   }
 })
 
-var swiper = React.createClass({
+var welcome = React.createClass({
   render: function() {
+    var _this = this;
     return (
-      <Swiper style={styles.wrapper} showsButtons={true}>
+      <View style={styles.container}>
+      <View>
+        <Text style={styles.header}>
+        IMO
+        </Text>
+      </View>
+      <Swiper style={styles.wrapper} width={350} height={400} showsButtons={true}>
         <View style={styles.slide1}>
-          <Text style={styles.text}>Hello Swiper</Text>
+          <Text style={styles.text}>Welcome to IMO.{"\n"}{"\n"}Visit memorials of those important to you. </Text>
         </View>
         <View style={styles.slide2}>
-          <Text style={styles.text}>Beautiful</Text>
+          <Text style={styles.text}>Screenshot 1</Text>
         </View>
         <View style={styles.slide3}>
-          <Text style={styles.text}>And simple</Text>
+          <Text style={styles.text}>Screenshot 2</Text>
         </View>
       </Swiper>
+      <View>
+      <FBLogin style={styles.facebookLoginButton}
+        permissions={["email","user_friends"]}
+        loginBehavior={FBLoginManager.LoginBehaviors.Native}
+        onLogin={function(data){
+          console.log("Logged in!");
+          console.log(data);
+          _this.setState({ user : data.credentials });
+        }}
+        onLogout={function(){
+          console.log("Logged out.");
+          _this.setState({ user : null });
+        }}
+        onLoginFound={function(data){
+          console.log("Existing login found.");
+          console.log(data);
+          _this.setState({ user : data.credentials });
+        }}
+        onLoginNotFound={function(){
+          console.log("No user logged in.");
+          _this.setState({ user : null });
+        }}
+        onError={function(data){
+          console.log("ERROR");
+          console.log(data);
+        }}
+        onCancel={function(){
+          console.log("User cancelled.");
+        }}
+        onPermissionsMissing={function(data){
+          console.log("Check permissions!");
+          console.log(data);
+        }}
+      />
+      </View>
+      </View>
     )
   }
 })
 
-AppRegistry.registerComponent('IMO', () => swiper)
+var FBLogin = require('react-native-facebook-login');
+var FBLoginManager = require('NativeModules').FBLoginManager;
 
-
-// /**
-//  * Sample React Native App
-//  * https://github.com/facebook/react-native
-//  */
-// 'use strict';
-// import React, {
-//   AppRegistry,
-//   Component,
-//   StyleSheet,
-//   Text,
-//   View
-// } from 'react-native';
+AppRegistry.registerComponent('IMO', () => welcome)
 
 // var REQUEST_URL = 'http://staging.imo.com/service_check.php';
 
